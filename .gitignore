@@ -1,0 +1,4 @@
+build
+pymotive.cpp
+
+*.pyd
