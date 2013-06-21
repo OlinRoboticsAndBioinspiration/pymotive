@@ -13,4 +13,8 @@ Author: AMH (based on Asa's README for Tracking Tools)
 
 4) OPTIONAL - Add the directory where you ran setup.py to your PYTHONPATH environment variable (to enable you to load the pymotive module without having to run the Python shell from that directory every time).
 
+NOTES:
 
+There is a conflict with an OpenMP library provided by Intel libiomp5mt.lib and another library provided by the Enthought distribution mk2iomp5md.dll. To "resolve" the issue I had to create and environment variable named KMP_DUPLICATE_LIB_OK with a value of TRUE. This is not the best way to resolve this issue, but I couldn't figure out how to ensure the correct library gets loaded and avoids a conflict with the other.
+
+AMH
