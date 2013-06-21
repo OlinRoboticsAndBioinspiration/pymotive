@@ -27,7 +27,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *
- * Cython wrapper of Tracking Tools API
+ * Cython wrapper of Motive API
  *
  * by Asa Eckert-Erdheim
  *
@@ -35,7 +35,7 @@
  *
  * Revisions:
  *  Asa E-E     2012-08-10      Code is fully functional.  Runs slow.
- * ... etc.
+ *  AMH         2013-06-21      Revised code to work with Motive 
  """
 
 from libcpp cimport bool
