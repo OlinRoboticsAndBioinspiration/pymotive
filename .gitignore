@@ -2,3 +2,5 @@ build
 pymotive.cpp
 
 *.pyd
+*.pyc
+*.dll
