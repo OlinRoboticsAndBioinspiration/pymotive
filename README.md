@@ -7,7 +7,7 @@ Author: AMH (based on Asa's README for Tracking Tools)
 
 1) Edit setup.py to reflect your system's installation paths for the NPTrackingTools(x64).dll and .lib files
 
-2) Copy the appropriate NPTrackingTools dll from the 'lib' subdirectory of the directory of the Motive installation directory to the same directory as setup.py and pymotive.pyx
+2) Copy the appropriate NPTrackingTools(x64) dll from the 'lib' subdirectory of the Motive installation directory to the same directory as setup.py and pymotive.pyx
 
 3) Run 'python setup.py build_ext --inplace'
 
@@ -15,6 +15,14 @@ Author: AMH (based on Asa's README for Tracking Tools)
 
 NOTES:
 
-There is a conflict with an OpenMP library provided by Intel libiomp5mt.lib and another library provided by the Enthought distribution mk2iomp5md.dll. To "resolve" the issue I had to create and environment variable named KMP_DUPLICATE_LIB_OK with a value of TRUE. This is not the best way to resolve this issue, but I couldn't figure out how to ensure the correct library gets loaded and avoids a conflict with the other.
+1) For the above to work, you will need to have a C++ compiler installed. The
+C++ compiler include with Visual Studio 2010 works well with Cython. 
+
+2) There is a conflict with an OpenMP library provided by Intel libiomp5mt.lib 
+and another library provided by the Enthought distribution mk2iomp5md.dll. To 
+"resolve" the issue I had to create an environment variable named 
+KMP_DUPLICATE_LIB_OK with a value of TRUE. This is not the best way to resolve 
+this issue, but I couldn't figure out how to ensure the correct library gets 
+loaded and avoids a conflict with the other.
 
 AMH
